@@ -1,0 +1,8 @@
+.Home{
+    background-image: url(../.././Assets/Img/home.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}

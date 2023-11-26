@@ -12,8 +12,8 @@ const Landing = () => {
                 <img src={logo} className={style.logo} />
                 <h3 className={style.seguridad}>Seguridad electrónica a tu alcance...</h3>
             </div>
-            <div className={style.divBoton} onClick={() => navigate('/home')}>
-                <div className={style.boton}>Iniciar</div>
+            <div className={style.divBoton} >
+                <div className={style.boton} onClick={() => navigate('/home')}>Iniciar</div>
             </div>
         </div>
     )
