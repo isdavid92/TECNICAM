@@ -3,6 +3,156 @@
     background-size: cover;
     background-position: center;
     height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.unoSombra{
+    position: absolute;
+    height: 100%;
+    width: 43%;
     display: flex;
     flex-direction: column;
+}
+
+.llegoSombra{
+    margin: auto;
+    margin-bottom: 0;
+    transform: translateY(1em);
+    color: blue;
+    font-family: CopperplateCC-Bold;
+    filter: blur(8px);
+}
+
+.familiaSom{
+    z-index: 0;
+    margin: auto;
+    margin-bottom: 0;
+    width: 87%;
+    filter: blur(4px);
+}
+
+.uno{
+    height: 100%;
+    width: 43%;
+    display: flex;
+    flex-direction: column;
+}
+
+@font-face {
+    font-family: CopperplateCC-Bold;
+    src: url(../../Assets/Fonts/CopperplateCC-Bold.ttf);
+}
+.llego{
+    color: white;
+    margin: auto;
+    margin-bottom: 0;
+    font-family: CopperplateCC-Bold;
+    transform: translateY(1em);
+}
+
+.familia{
+    z-index: 0;
+    margin: auto;
+    margin-bottom: 0;
+    width: 87%;
+}
+
+.dos{
+    width: 57%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
+}
+
+.vivir{
+    margin: auto auto 0 1em;
+    color: white;
+    font-family: CopperplateCC-Bold;
+    font-size: 4em;
+}
+
+.seguridad{
+    margin: 0 auto 0.2em 0.5em;
+    color: blue;
+    font-family: CopperplateCC-Bold;
+    font-size: 6em;
+}
+
+.dosSom{
+    height: 100%;
+    position: absolute;
+    width: 57%;
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
+    transform: translateX(75.44%);
+}
+
+.vivirSom{
+    margin: auto auto 0 1em;
+    color: blue;
+    font-family: CopperplateCC-Bold;
+    font-size: 4em;
+    filter: blur(8px);
+}
+
+.seguridadSom{
+    margin: 0 auto 0.2em 0.5em;
+    color: white;
+    font-family: CopperplateCC-Bold;
+    font-size: 6em;
+    filter: blur(3px);
+}
+
+.notaSom{
+    display: flex;
+    flex-direction:row;
+}
+
+.conoceSom{
+    font-family: papyrus;
+    margin: 0;
+    margin-left: auto;
+    font-size: 2em;
+    visibility: hidden;
+}
+
+.serviciosSom{
+    font-family: papyrus;
+    margin: 0;
+    margin-left: 0.5em;
+    margin-right: 1em;
+    font-size: 2em;
+    text-decoration: underline;
+    user-select: none;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.nota{
+    display: flex;
+    flex-direction:row;
+}
+
+.conoce{
+    color: rgb(112, 112, 3);
+    font-family: papyrus;
+    margin: 0;
+    margin-left: auto;
+    font-size: 2em;
+}
+
+.servicios{
+    user-select: none;
+    color: rgb(155, 155, 4);
+    font-family: papyrus;
+    margin: 0;
+    margin-left: 0.5em;
+    margin-right: 1em;
+    text-decoration: underline;
+    font-size: 2em;
+    cursor: pointer;
 }

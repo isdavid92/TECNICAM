@@ -3,6 +3,7 @@
     position: absolute;
     display: flex;
     height: 9vh;
+    z-index: 1;
 }
 
 .Nav{
@@ -14,6 +15,7 @@
 }
 
 .h2{
+    user-select: none;
     margin: auto;
     color: white;
     font-family: papyrus;
