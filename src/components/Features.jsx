@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Check, Zap, Smartphone } from 'lucide-react';
+import { Check, Zap, Smartphone as Device, ArrowLeft, Settings, Film, Camera, Mic, Video, ImageIcon, ChevronDown, ChevronUp } from 'lucide-react';
 import './Features.css';
 
 const Features = () => {
@@ -21,6 +21,13 @@ const Features = () => {
       fadeElements.forEach(el => observer.unobserve(el));
     };
   }, []);
+
+  const cameras = [
+    { label: 'Entrada Principal', image: '/cam_entrada.png', percent: '14%' },
+    { label: 'Jardín', image: '/cam_jardin.png', percent: '13%' },
+    { label: 'Garage', image: '/cam_garage.png', percent: '13%' },
+    { label: 'Oficina', image: '/cam_oficina.png', percent: '14%' },
+  ];
 
   return (
     <section id="nosotros" className="features section-padding bg-darker" ref={sectionRef}>
@@ -50,7 +57,7 @@ const Features = () => {
             </li>
             <li>
               <div className="feature-bullet">
-                <Smartphone className="text-cyan" />
+                <Device className="text-cyan" />
               </div>
               <div className="feature-details">
                 <strong>Control en tu Mano</strong>
@@ -63,24 +70,39 @@ const Features = () => {
         <div className="features-image fade-in-right">
           <div className="glass-container">
             <div className="app-ui-mockup">
-              <div className="mockup-header">App TECNICAM</div>
+              <div className="mockup-toolbar">
+                <button className="mockup-icon"><ArrowLeft size={18} /></button>
+                <span className="mockup-title">App TECNICAM</span>
+                <button className="mockup-icon"><Settings size={18} /></button>
+              </div>
+
               <div className="mockup-cam-grid">
-                <div className="mockup-cam" style={{ backgroundImage: "url('/cam_entrada.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
-                  <div className="cam-label">Entrada Principal</div>
-                  <div className="rec-dot"></div>
+                {cameras.map(cam => (
+                  <div key={cam.label} className="mockup-cam" style={{ backgroundImage: `url('${cam.image}')` }}>
+                    <div className="cam-bottom">
+                      <span>{cam.label}</span>
+                    </div>
+                    <div className="rec-dot"></div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mockup-controls">
+                <button className="control-button"><Film size={18} /></button>
+                <button className="control-button"><Camera size={18} /></button>
+                <button className="control-button control-button--active"><Mic size={24} /></button>
+                <button className="control-button"><Video size={18} /></button>
+                <button className="control-button"><ImageIcon size={18} /></button>
+              </div>
+              <div className="mockup-control-arrow">
+                <ChevronDown size={22} />
+              </div>
+              <div className="mockup-alert">
+                <div className="alert-left">
+                  <span className="alert-icon">🗓</span>
+                  <span>Mensaje de alarma</span>
                 </div>
-                <div className="mockup-cam" style={{ backgroundImage: "url('/cam_jardin.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
-                  <div className="cam-label">Jardín</div>
-                  <div className="rec-dot"></div>
-                </div>
-                <div className="mockup-cam" style={{ backgroundImage: "url('/cam_garage.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
-                  <div className="cam-label">Garage</div>
-                  <div className="rec-dot"></div>
-                </div>
-                <div className="mockup-cam" style={{ backgroundImage: "url('/cam_oficina.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
-                  <div className="cam-label">Oficina</div>
-                  <div className="rec-dot"></div>
-                </div>
+                <button className="alert-expand"><ChevronUp size={18} /></button>
               </div>
             </div>
           </div>

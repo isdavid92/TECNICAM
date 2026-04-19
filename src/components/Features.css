@@ -65,55 +65,186 @@
 }
 
 .app-ui-mockup {
-  background: #0f172a;
-  border-radius: 16px;
+  background: #081124;
+  border-radius: 24px;
   overflow: hidden;
-  border: 4px solid #1e293b;
+  border: 1px solid rgba(255,255,255,0.07);
 }
 
-.mockup-header {
-  background: #1e293b;
-  padding: 15px;
-  text-align: center;
-  font-weight: 600;
-  font-family: var(--font-display);
-  border-bottom: 1px solid #334155;
+.mockup-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  background: rgba(15,23,42,0.95);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.mockup-title {
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.mockup-icon {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.04);
+  color: #cbd5e1;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.mockup-icon:hover {
+  background: rgba(255,255,255,0.12);
 }
 
 .mockup-cam-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
-  padding: 10px;
+  padding: 12px;
 }
 
 .mockup-cam {
-  background: #1e293b;
-  aspect-ratio: 16/9;
-  border-radius: 8px;
+  height: 0;
+  padding-bottom: 56.25%;
+  border-radius: 5px;
   position: relative;
-  background-image: linear-gradient(45deg, #1e293b 25%, #243144 25%, #243144 50%, #1e293b 50%, #1e293b 75%, #243144 75%, #243144 100%);
-  background-size: 20px 20px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.06);
 }
 
-.cam-label {
+.mockup-cam::after {
+  content: '';
   position: absolute;
-  bottom: 8px;
-  left: 8px;
-  background: rgba(0,0,0,0.6);
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.12) 0%, rgba(0,0,0,0.55) 100%);
+}
+
+.cam-bottom {
+  position: absolute;
+  bottom: 2px;
+  left: 2px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+.cam-bottom span {
+  background: rgba(0,0,0,0.45);
   padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 0.7rem;
+  border-radius: 8px;
 }
 
 .rec-dot {
   position: absolute;
-  top: 8px;
-  right: 8px;
-  width: 6px;
-  height: 6px;
-  background: var(--accent);
+  top: 10px;
+  right: 10px;
+  width: 8px;
+  height: 8px;
+  background: #f87171;
   border-radius: 50%;
+  z-index: 2;
+  box-shadow: 0 0 0 2px rgba(248,113,113,0.25);
+}
+
+.mockup-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  background: rgba(15,23,42,0.95);
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.control-button {
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+  color: #cbd5e1;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.control-button:hover {
+  background: rgba(255,255,255,0.14);
+  transform: translateY(-1px);
+}
+
+.control-button--active {
+  width: 60px;
+  height: 60px;
+  background: rgba(14,165,233,0.22);
+  color: #ffffff;
+  box-shadow: 0 10px 30px rgba(14,165,233,0.18);
+}
+
+.mockup-control-arrow {
+  display: flex;
+  justify-content: center;
+  padding: 8px 0 0;
+  color: #cbd5e1;
+}
+
+.mockup-alert {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  margin-top: 8px;
+  background: rgba(15,23,42,0.97);
+  color: #f8fafc;
+  font-size: 0.95rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.alert-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.alert-icon {
+  display: inline-flex;
+  width: 34px;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: rgba(248,113,113,0.18);
+}
+
+.alert-expand {
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+  color: #cbd5e1;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.alert-expand:hover {
+  background: rgba(255,255,255,0.12);
 }
 
 @media (max-width: 1024px) {
