@@ -1,0 +1,128 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--nav-height);
+  z-index: 1000;
+  transition: var(--transition-normal);
+  background: transparent;
+}
+
+.scrolled {
+  background: rgba(11, 15, 25, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.logo-icon {
+  color: var(--primary);
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: var(--transition-fast);
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: var(--transition-normal);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.mobile-menu-btn,
+.close-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(5, 8, 15, 0.98);
+  backdrop-filter: blur(20px);
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: var(--transition-normal);
+}
+
+.mobile-menu.active {
+  right: 0;
+}
+
+.close-menu-btn {
+  position: absolute;
+  top: 30px;
+  right: 5%;
+  display: block;
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.mobile-nav-links a {
+  font-size: 1.5rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .nav-links, .nav-actions .btn { display: none; }
+  .mobile-menu-btn { display: block; }
+}
