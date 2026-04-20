@@ -171,6 +171,22 @@
   animation: pulse 1.5s infinite;
 }
 
+.camera-lens-wrapper {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.camera-lens-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 40px rgba(0, 225, 255, 0.3));
+}
+
 @media (max-width: 1024px) {
   .hero-title { font-size: 3rem; }
 }

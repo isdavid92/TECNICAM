@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { ArrowRight, Video } from 'lucide-react';
+import lensImg from '../assets/LENTE.png';
 import './Hero.css';
 
 const Hero = () => {
@@ -66,11 +67,9 @@ const Hero = () => {
       </div>
       
       <div className="hero-camera-container fade-in-right">
-        {/* Usamos un div redondo temporal para simular la cámara si no importamos la imagen en vite */}
-        <div style={{width: '300px', height: '300px', backgroundColor: '#1e293b', borderRadius: '50%', border: '4px solid #00e1ff', boxShadow: '0 0 50px rgba(0, 225, 255, 0.4)', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-           <div style={{width: '100px', height: '100px', backgroundColor: '#0f172a', borderRadius: '50%', border: '2px solid #334155'}}></div>
+        <div className="camera-lens-wrapper">
+          <img src={lensImg} alt="Lente de cámara" className="camera-lens-img" />
         </div>
-        
         <div className="glow-orb blue"></div>
         <div className="glow-orb cyan"></div>
         

@@ -3,7 +3,7 @@ import './WhatsAppWidget.css';
 
 const WhatsAppWidget = () => {
   // Número actualizado del cliente
-  const phoneNumber = "573015885116"; 
+  const phoneNumber = "573135678762"; 
   const message = "Hola TECNICAM, estoy interesado en sus servicios de seguridad y me gustaría recibir más información.";
   const waUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 

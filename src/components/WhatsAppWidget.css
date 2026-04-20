@@ -1,7 +1,7 @@
 .whatsapp-widget {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
+  bottom: env(safe-area-inset-bottom, 30px);
+  right: env(safe-area-inset-right, 30px);
   width: 60px;
   height: 60px;
   background-color: #25d366;
@@ -34,8 +34,8 @@
 
 @media (max-width: 768px) {
   .whatsapp-widget {
-    bottom: 20px;
-    right: 20px;
+    bottom: env(safe-area-inset-bottom, 20px);
+    right: env(safe-area-inset-right, 20px);
     width: 50px;
     height: 50px;
   }
